@@ -12,26 +12,23 @@ namespace Bamboo_Bot.Modules
     public class LeagueOfLegendsTeamBuilder : ModuleBase<SocketCommandContext>
     {
         public static string[] champions;
-        List<string> team = new List<string>();
         System.Net.WebClient wc = new System.Net.WebClient();
-        string Team1;
+        string Game;
 
         [Command("LoLCustom")]
-        public async Task FeedMeAsync(int TeamA, int TeamB)
+        public async Task FeedMeAsync(int red, int blue)
         {
-            Team1 = "";
-            byte[] raw = wc.DownloadData("http://www.yoursite.com/resource/file.htm");
+            Game = "";
+            byte[] raw = wc.DownloadData("http://www.simonvandoorne.com/index.php/actions/teamBuilder/handler/test?red=" + red + "&blue=" + blue);
             string webData = System.Text.Encoding.UTF8.GetString(raw);
             Json.RecievedDataConverter(webData);
 
-            //team.Add("Illoai");
-            //team.Add("Zac");
-            foreach (string champions in team)
+            foreach (string champion in champions)
             {
-                Team1 = Team1 +"-"+champions; 
+                Game = Game + " "+champion; 
             }
 
-            await ReplyAsync($"{Team1}");
+            await ReplyAsync($"{Game}");
         }
     }
 }

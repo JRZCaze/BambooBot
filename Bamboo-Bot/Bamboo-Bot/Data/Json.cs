@@ -17,7 +17,7 @@ namespace Bamboo_Bot.Data
         private string ipAdress;
         int adressPort;
 
-        public static void StartDataLink()
+        /*public static void StartDataLink()
         {
             string ipAdress = "127.00.00.1";
             int adressPort = 8080;
@@ -30,9 +30,9 @@ namespace Bamboo_Bot.Data
             string msg = Newtonsoft.Json.JsonConvert.SerializeObject(data) + "\n";
             byte[] msgBuffer = Encoding.Default.GetBytes(msg);
             sck.Send(msgBuffer, 0, msgBuffer.Length, 0);
-        }
+        }*/
 
-        public static string JsonToData(string data)
+        public static string DataToJson(string data)
         {
            return Newtonsoft.Json.JsonConvert.SerializeObject(data) + "\n";
         }
@@ -42,7 +42,7 @@ namespace Bamboo_Bot.Data
             return Newtonsoft.Json.JsonConvert.SerializeObject(data) + "\n";
         }*/
 
-        public static void Recieve()
+        /*public static void Recieve()
         {
             byte[] buffer = new byte[1023];
             if (buffer.Length > 0)
@@ -52,13 +52,13 @@ namespace Bamboo_Bot.Data
                 Array.Resize(ref buffer, rec);
                 RecievedDataConverter(Encoding.Default.GetString(buffer));
             }
-        }
+        }*/
 
         public static void RecievedDataConverter(string Data)
         {
             try
             {
-                string [] DataRecived = JsonConvert.DeserializeObject<string[]>(Data);
+                string[] DataRecived = JsonConvert.DeserializeObject<string[]>(Data);
                 if (DataRecived != null)
                 {
                     LeagueOfLegendsTeamBuilder.champions = DataRecived;
