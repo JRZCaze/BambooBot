@@ -1,7 +1,6 @@
 ﻿using Bamboo_Bot.Classes;
 using Bamboo_Bot.Data;
 using Discord.Commands;
-using Discord.Commands;
 using Discord.WebSocket;
 using System;
 using System.Collections.Generic;

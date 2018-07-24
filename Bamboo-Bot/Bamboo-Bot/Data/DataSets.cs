@@ -23,9 +23,6 @@ namespace Bamboo_Bot.Data
         //ints
         public static void IntegerVariables()
         {
-            StartingCurrency = 5;
-            BigJackpot = 5;
-            SmallJackpot = 3;
         }
         //strings
         public static void StringVariables()

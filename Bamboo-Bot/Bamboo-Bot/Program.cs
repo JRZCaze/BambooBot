@@ -53,11 +53,6 @@ namespace Bamboo_Bot
             await Task.Delay(-1);
         }
 
-        private async Task UserDataChecker(SocketGuildUser user)
-        {
-
-        }
-
         private async Task AnnounceUserJoined(SocketGuildUser user)
         {
             var guild = user.Guild;
