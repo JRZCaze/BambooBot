@@ -50,5 +50,16 @@ namespace Bamboo_Bot.Discord
             }
             return false;
         }
+
+        public static void CurrencyBelowZeroFix(ulong userId)
+        {
+            for (int i = 0; i < Program.PlayerList.Count; i++)
+            {
+                if (Program.PlayerList[i].ID == userId & Program.PlayerList[i].Cash < 0)
+                {
+                    Program.PlayerList[i].Cash = 0;
+                }
+            }
+        }
     }
 }

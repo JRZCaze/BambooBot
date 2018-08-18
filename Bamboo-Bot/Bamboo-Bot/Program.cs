@@ -37,7 +37,7 @@ namespace Bamboo_Bot
             _service.AddSingleton(Commands);
             Services = _service.BuildServiceProvider();
 
-            string botToken = "NDY4ODU1NTM1MzY2ODMyMTQ0.Di_bDQ.RYIAr3wMTOnAgat1wRhvvpj6iz4";
+            string botToken = "";
 
             //event subscriptions
             Client.Log += Log;

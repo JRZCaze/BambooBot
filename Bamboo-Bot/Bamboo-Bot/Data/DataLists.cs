@@ -9,6 +9,8 @@ namespace Bamboo_Bot.Lists
     class DataLists
     {
         public static List<string> Facts = new List<string>();
+        public static List<int> ForageResultsValues = new List<int>();
+        public static List<string> ForageResults = new List<string>();
 
 
         public static void InitialiseDataLists()
@@ -28,6 +30,15 @@ namespace Bamboo_Bot.Lists
             Facts.Add("Sadly, these beautiful bears are endangered, and it’s estimated that only around 1,000 remain in the wild. That’s why we need to do all we can to protect them!");
             Facts.Add("Giant pandas (often referred to as simply “pandas”) are black and white bears. In the wild, they are found in thick bamboo forests, high up in the mountains of central China – you can check out our cool facts about China, here!");
             //Facts.Add("");
+
+            ForageResults.Add("Well done little panda. You have found 10 bamboo sticks");
+            ForageResultsValues.Add(10);
+            ForageResults.Add("As you were foraging you fell of a tree. You lost 30 bamboo sticks because of your fat ass");
+            ForageResultsValues.Add(-30);
+            ForageResults.Add("While you were foraging a wild snek appeared. You lost 3 bamboo sticks while defending yourself. At least you're alive!");
+            ForageResultsValues.Add(-3);
+            ForageResults.Add("While foraging you found a golden froot worth 40 bamboo sticks. You lucky fuck!");
+            ForageResultsValues.Add(40);
         }
     }
 }

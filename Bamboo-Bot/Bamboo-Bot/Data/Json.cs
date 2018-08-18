@@ -13,9 +13,9 @@ namespace Bamboo_Bot.Data
 {
     public class Json
     {
-        private static Socket sck;
-        private string ipAdress;
-        int adressPort;
+        //private static Socket sck;
+        //private string ipAdress;
+        //int adressPort;
 
         /*public static void StartDataLink()
         {
@@ -54,18 +54,15 @@ namespace Bamboo_Bot.Data
             }
         }*/
 
-        public static void RecievedDataConverter(string Data)
+        public static void RecievedDataConverterLeagueTeamBuilder(string Data)
         {
-            try
+
+            string[] DataRecived = JsonConvert.DeserializeObject<string[]>(Data);
+            if (DataRecived != null)
             {
-                string[] DataRecived = JsonConvert.DeserializeObject<string[]>(Data);
-                if (DataRecived != null)
-                {
-                    LeagueOfLegendsTeamBuilder.champions = DataRecived;
-                }
+                LeagueOfLegendsTeamBuilder.champions = DataRecived;
             }
-            catch
-            { }   
+
         }
     }
 }

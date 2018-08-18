@@ -21,7 +21,7 @@ namespace Bamboo_Bot.Modules
             Game = "";
             byte[] raw = wc.DownloadData("http://www.simonvandoorne.com/index.php/actions/teamBuilder/handler/test?red=" + red + "&blue=" + blue);
             string webData = System.Text.Encoding.UTF8.GetString(raw);
-            Json.RecievedDataConverter(webData);
+            Json.RecievedDataConverterLeagueTeamBuilder(webData);
 
             foreach (string champion in champions)
             {

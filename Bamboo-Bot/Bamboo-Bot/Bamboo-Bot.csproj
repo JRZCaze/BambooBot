@@ -140,6 +140,7 @@
     <Compile Include="Discord\Players.cs" />
     <Compile Include="Data\DataLists.cs" />
     <Compile Include="Modules\BambooWhack.cs" />
+    <Compile Include="Modules\Daily.cs" />
     <Compile Include="Modules\FeedMe.cs" />
     <Compile Include="Discord\Leveling.cs" />
     <Compile Include="Modules\LeagueOfLegendsTeamBuilder.cs" />

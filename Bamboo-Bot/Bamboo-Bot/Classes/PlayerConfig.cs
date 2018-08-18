@@ -16,7 +16,7 @@ namespace Bamboo_Bot.Classes
 
         //public int Food { get; set; }
 
-        //public DateTime LastDaily { get; set; }
+        public DateTime LastDaily { get; set; }
 
         //public Level Level { get; set; }
     }
